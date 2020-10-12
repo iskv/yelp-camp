@@ -15,6 +15,10 @@ const campgroundSchema = new mongoose.Schema({
 		},
 		username: String,
 	},
+	price: {
+		type: Number,
+		min: 0,
+	},
 });
 
 module.exports = mongoose.model("Campground", campgroundSchema);

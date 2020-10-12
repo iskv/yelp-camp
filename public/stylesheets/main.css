@@ -1,15 +1,66 @@
-.thumbnail img {
+body {
+	font-family: "Nunito", sans-serif;
+}
+
+#mainNavbar {
+	/* font-size: 1.2rem; */
+	font-size: 1.5rem;
+    font-weight: 100;
+	/* color: white; */
+}
+
+#mainNavbar .nav-link:hover {
+    color: rgba(0,0,0,0.6);
+}
+
+.navbar .scrolled {
+	/* font-size: 1.5rem;
+	color: black; */
+	background: rgb(222,192,222);
+    transition: background 500ms;
+}
+
+#login-form {
+	min-width: 200px;
+}
+
+.message-block {
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+    right: 25%;
+	left: 25%;
+	top: 30%;    
+	z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.message-block-small {
+	background-color: rgba(0,0,0,0.5);
+	text-align: center;
+	z-index: 10;
+	color: #fff;
 	width: 100%;
+	height: 100%;
 }
 
-.thumbnail {
-	padding: 0;
+.background-opts {
+	background-size: cover;
+	background-position: 50% 50%;
+	height: 100vh;
 }
 
-.thumbnail .caption-full {
-	padding: 9px;
+#slide1 {
+	background-image: url(http://i.imgur.com/K3mPv14.jpg);
 }
 
-.deleteForm {
-	display: inline;
+#slide2 {
+	background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+}
+
+#slide3 {
+	background-image: url(http://i.imgur.com/emvhOnb.jpg);
 }

@@ -43,6 +43,7 @@ router.post("/", middleware.isLoggedIn, (req, res) => {
 router.get("/:comment_id/edit", middleware.checkCommentOwnership, (req, res) => {
 	Comment.findById(req.params.comment_id, (err, comment) => {
 		if (err) {
+			req.flash("error", "Comment not found");
 			res.redirect("back");
 		} else {
 			res.render("comments/edit", { campground_id: req.params.id, comment: comment});
@@ -52,10 +53,13 @@ router.get("/:comment_id/edit", middleware.checkCommentOwnership, (req, res) => 
 
 // UPDATE comment router
 router.put("/:comment_id/", middleware.checkCommentOwnership, (req, res) => {
+	req.body.comment.date = new Date;
 	Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, (err, updComm) => {
 		if (err) {
+			req.flash("error", "Comment not updated");
 			res.redirect("back");
 		} else {
+			req.flash("success", "Comment updated");
 			res.redirect(`/campgrounds/${req.params.id}`);
 		}
 	});
@@ -65,6 +69,7 @@ router.put("/:comment_id/", middleware.checkCommentOwnership, (req, res) => {
 router.delete("/:comment_id", middleware.checkCommentOwnership, (req, res) => {
 	Comment.findByIdAndRemove(req.params.comment_id, (err, remComm) => {
 		if (err) {
+			req.flash("error", "Comment not deleted");
 			res.redirect("back");
 		} else {
 			req.flash("success", "Comment deleted");

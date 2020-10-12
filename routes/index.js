@@ -44,6 +44,7 @@ router.get("/login", (req, res) => {
 router.post("/login", passport.authenticate("local", {
 	successRedirect: "/campgrounds",
 	failureRedirect: "/login",
+	failureFlash: true,
 }));
 
 // User logout handler
