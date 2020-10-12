@@ -1,15 +1,7 @@
 <%- include("../partials/header") %>
 
 <div class="container">
-	<div class="row">
-		<!-- <div class="col-lg-3">
-			<p class="lead">YelpCamp</p>
-			<div class="list-group">
-				<li class="list-group-item active">Info1</li>
-				<li class="list-group-item">Info2</li>
-				<li class="list-group-item">Info3</li>
-			</div>
-		</div> -->
+	<div class="row">		
 		<div class="col-lg-12">
 			<div class="card">
   				<img src="<%= campground.image %>" class="card-img-top" alt="campground image">
@@ -23,8 +15,8 @@
 						<form class="d-inline" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
 							<button class="btn btn-sm btn-danger">Delete</button>
 						</form>
-						<a class="btn btn-sm btn-success float-right" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
 					<% } %>	
+					<a class="btn btn-sm btn-success float-right" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
   				</div>
 			</div>			
 			
