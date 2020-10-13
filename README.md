@@ -2,7 +2,7 @@
 
 About YelpCamp Web App
 ---
-This web application was created during the course "The Web Developer Bootcamp".
+This web application was created during the course Udemy: "The Web Developer Bootcamp".
 
 Current functionality:
 
