@@ -1,7 +1,7 @@
 # yelp-camp - web development portfolio
 
-About YelpCamp Web App
----
+# About YelpCamp Web App
+
 This web application was created during the course Udemy: "The Web Developer Bootcamp".
 
 Current functionality:
@@ -11,8 +11,8 @@ Current functionality:
 * Adding / editing / deleting user's campground
 * Adding / editing / deleting user's comment per campground
 
-Technical Details
----
+# Technical Details
+
 The project used:
 
 * Node JS
@@ -21,5 +21,7 @@ The project used:
 * Bootstrap, Font Awesome, Google fonts
 
 This web-application is designed with RESTful.
+
+# DEMO
 
 <a href="https://blooming-brook-59462.herokuapp.com/">Deployed</a> on Heroku
